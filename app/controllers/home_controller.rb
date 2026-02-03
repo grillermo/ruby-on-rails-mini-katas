@@ -1,9 +1,12 @@
-require 'slow/lib'
-
 class HomeController < ApplicationController
-  include Slow::Lib
-
   def root
+    require 'slow/lib'
+    self.extend(Slow::Lib)
+
     render plain: say_hi
+  end
+
+  def omg
+    render plain: "omg"
   end
 end
