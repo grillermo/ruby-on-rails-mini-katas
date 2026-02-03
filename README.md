@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For this kata you need to configure your rails application to ensure that
+a heavy library is not loaded when the application runs but only after and
+endpoint using is called. In this case the root / path should load slow but 
+health check path /up shouldn't.
 
-Things you may want to cover:
+Change as little as possible, use rails features for this, do not touch the gem.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
