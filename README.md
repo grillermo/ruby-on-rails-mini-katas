@@ -1,4 +1,3 @@
 # README
 
-For this kata you have to install rspec and basic batteries, prove that it works with a request test a model test and
-a PORO test
+For this Kata you need to use a Form object to serve as bridge between the controller and multiple affected models
