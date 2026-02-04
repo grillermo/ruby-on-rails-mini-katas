@@ -5,7 +5,7 @@ describe PayProduct, type: :interactor do
     let!(:card)  { create(:card) }
     let!(:product)  { create(:product) }
 
-    subject(:context) { PayProduct.call({card_id: card.id, product_id: product.id }) }
+    subject(:context) { PayProduct.call(card_id: card.id, product_id: product.id) }
 
     context 'with a valid card and product' do
       it { expect(context).to be_a_success }
