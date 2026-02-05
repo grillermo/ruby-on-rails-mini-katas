@@ -1,3 +1,4 @@
 # README
 
-For this Kata you need to use a Form object to serve as bridge between the controller and multiple affected models
+For this Kata you need to setup a multi database environment where you had one primary for all writes and one read replica
+for all reads of a specific model. 
