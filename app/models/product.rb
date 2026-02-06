@@ -3,6 +3,6 @@ class Product < ApplicationRecord
   has_many :variants
 
   def self.to_json
-    all.as_json(include: :variants).to_json
+    all.includes(:variants).as_json(include: :variants).to_json
   end
 end
