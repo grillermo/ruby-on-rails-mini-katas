@@ -43,6 +43,7 @@ gem "image_processing", "~> 1.2"
 gem "interactor"
 
 gem "attr_extras"
+gem "statsd-instrument"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
