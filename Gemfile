@@ -44,6 +44,8 @@ gem "interactor"
 
 gem "attr_extras"
 gem "statsd-instrument"
+gem "faraday"
+gem "faraday-retry"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -78,4 +80,5 @@ group :test do
   gem "selenium-webdriver"
 
   gem "factory_bot_rails"
+  gem "webmock"
 end

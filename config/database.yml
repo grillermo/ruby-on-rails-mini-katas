@@ -13,9 +13,6 @@ development:
   primary:
     <<: *default
     database: storage/development.sqlite3
-  read_replica:
-    <<: *default
-    database: storage/development-read_replica.sqlite3
 
 
 # Warning: The database defined as "test" will be erased and
