@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_06_034929) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_06_040259) do
   create_table "cards", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.integer "last4"
@@ -37,4 +37,14 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_06_034929) do
     t.string "name"
     t.datetime "updated_at", null: false
   end
+
+  create_table "variants", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.string "name"
+    t.integer "product_id", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_variants_on_product_id"
+  end
+
+  add_foreign_key "variants", "products"
 end

@@ -7,12 +7,17 @@ Product.destroy_all
 
 puts "Seeding products..."
 
-100.times do |i|
-  Product.create!(
+1000.times do |i|
+  product =Product.create!(
     name: Faker::Commerce.product_name,
     cost: Faker::Number.between(from: 10, to: 1000),
     description: Faker::Lorem.paragraph_by_chars(number: 1000)
   )
+
+  10.times.each do 
+    Variant.create(name: product.name + " #{Random.hex}", product: product)
+  end
+
 end
 
 puts "Created #{Product.count} products."

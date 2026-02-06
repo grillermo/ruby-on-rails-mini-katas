@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   post 'charge' => 'card#charge'
 
   post 'register' => 'registration#register'
+
+  resources :products, only: [ :index ]
 end
