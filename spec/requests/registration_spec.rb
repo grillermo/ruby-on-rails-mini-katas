@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Registrations", type: :request do
   describe "POST /register" do
+    
     subject { post(register_path, params: { user_name: 'wow', company_name: 'coke'}) }
 
     it 'returns 200' do

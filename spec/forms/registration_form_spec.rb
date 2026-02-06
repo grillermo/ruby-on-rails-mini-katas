@@ -17,6 +17,7 @@ describe RegistrationForm do
 
       it 'creates a new user' do
         expect { subject }.to change { User.count }.by 1
+        expect(User.last.name).to eql(user_name)
       end
 
       it 'creates a new company' do
