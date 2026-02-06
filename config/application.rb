@@ -23,5 +23,10 @@ module MiniKatas
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Use 'spec' folder for Minitest as well
+    config.generators do |g|
+      g.test_framework :minitest, spec: true, fixture: true
+    end
   end
 end

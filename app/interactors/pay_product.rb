@@ -23,8 +23,9 @@ class PayProduct
   end
 
   def load_card
-    context.card = Card.find(context.card_id)
+    card_id = context.card_id || context.id
+    context.card = Card.find(card_id)
   rescue ActiveRecord::RecordNotFound
-    context.fail!(message: "Card with id ##{context.id} not found")
+    context.fail!(message: "Card with id ##{card_id} not found")
   end
 end
